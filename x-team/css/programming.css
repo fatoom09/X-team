@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: #28b409;
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #313131;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #28b409;
+}
+
+body {
+    font-family: 'Milonga', cursive;
+    background-color: #313131;
+    color: #fff;
+}
+
+h1,h2 {
+    font-family: 'Girassol', cursive;
+}
+
+h5,h4{
+    font-family: 'Pattaya', sans-serif;
+}
+
+/* Navbar section starts  */
+
+.navbar {
+    background-color: #313131b6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0 0 85% 85% / 70%;
+}
+
+nav ul {text-align: center;}
+
+nav ul li {
+    position: relative;
+    font-size: 20px;
+    margin: 15px;
+    margin: auto;
+}
+
+nav ul li::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 20px;
+    border-top: 5px double #fff;
+    border-left: 5px double #fff;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+nav ul li::after {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 20px;
+    border-bottom: 5px double #fff;
+    border-right: 5px double #fff;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+nav ul li:hover::before {
+    left: -5px;
+    top: -5px;
+    opacity: 1;
+}
+
+nav ul li:hover::after {
+    right: -5px;
+    bottom: -5px;
+    opacity: 1;
+}
+
+nav ul li a { color: #fff; }
+nav ul li:hover a { color: #28b409; }
+
+nav .navbar-toggler i {
+    color: #28b409;
+    font-size: 30px;
+}
+
+.btn a{
+    position: relative;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #28b409;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.btn a:hover {
+    transition-delay: 1.5s;
+    box-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 160px #fff;
+}
+
+.btn a span {
+    position: relative;
+    z-index: 100;
+}
+
+.btn a::before {
+    content: '';
+    position: absolute;
+    left: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 5px -8px 0 #fff,
+                5px 8px 0 #fff;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.btn a:hover::before {
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #fff,
+                5px 0 0 #fff;
+    transition-delay: 0s, 0.5s 1s, 1s;
+}
+
+.btn a::after {
+    content: '';
+    position: absolute;
+    right: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: -5px -8px 0 #fff,
+                -5px 8px 0 #fff;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.btn a:hover::after {
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #fff,
+                -5px 0 0 #fff;
+    transition-delay: 0s, 0.5s 1s, 1s;
+}
+
+/* Navbar section ends  */
+
+/* Header section starts */
+
+header {
+    background-image: url(../images/img1.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+}
+
+header .title {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+header .content .h1 {
+    z-index: 99;
+}
+
+header span {
+    font-size: 60px;
+    color: #313131;
+}
+
+/* header .btn {z-index: 99; margin-top: 5%;}
+
+header .btn a span{
+    font-size: 18px;
+    color: #313131;
+}
+header .btn a, .contact .btn a{-webkit-box-reflect: below 0px linear-gradient(transparent, #3131317e);}  
+header .btn a::before {left: -8%;}
+header .btn a::after {right: -8%;} */
+header p {width: 70%;}
+
+.block {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #28b409b0;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+/* Header section ends */
+
+/* article section starts  */
+
+article {
+    background-image: linear-gradient(to bottom, #313131de, #313131de), url(../images/img5.jpg);
+    overflow: hidden;
+}
+
+p {
+    line-height: 30px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 20px;
+}
+
+article h1 {color: #28b409; letter-spacing: 2px;}
+
+article .content {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 5px 45px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    -o-backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+    text-align: center;
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+.contact .btn a {-webkit-box-reflect: below 0px linear-gradient(transparent, #3131317e);}
+.contact .btn a:hover::after {right: -2px;}
+.contact .btn a:hover::before {left: -2px;}
+article .content h2 {color: #28b409;}
+
+article .content .image {
+    margin: auto;
+}
+/* article section ends  */
+
+/* Contact section starts */
+
+.contact {
+    background-image: linear-gradient(to bottom, #313131de, #313131de), url(../images/img5.jpg);
+    overflow: hidden;
+}
+.contact h1, .contact h3, .contact i {color: #28b409;}
+.contact form {
+    width: 80%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 5px 45px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    -o-backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+    margin: auto;
+}
+
+.contact input:not(input[type="checkbox"]), .contact textarea, .contact .form-control {
+    padding: 5px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #28b409;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.check {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30%;
+    border-bottom: 1px solid #28b409;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    margin: auto;
+    padding: 5px;
+}
+
+select option {background-color: #313131;}
+.contact label {color: #fff; font-size: 20px;}
+.contact input::placeholder, .contact textarea::placeholder {color: rgba(255, 255, 255, 0.637)}
+.contact input:focus, .contact textarea:focus {color: #fff}
+h1 {position: relative;}
+
+.contact .form-control {
+    margin: auto;
+    color: #fff;
+    box-shadow: none;
+}
+
+h1::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 20%;
+    right: 0;
+    width: 30%;
+    height: 3px;
+    transform: translateX(50%);
+    background: linear-gradient(to left, transparent,#fff, transparent);
+}
+
+h1::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 20%;
+    right: 0;
+    width: 30%;
+    height: 3px;
+    transform: translateX(50%);
+    background: linear-gradient(to left, transparent,#fff, transparent);
+}
+
+.contact .btn a::before {left: -14%}
+.contact .btn a::after {right: -14%}
+.sec2, table {margin: auto; text-align:center}
+
+/* Contact section ends */
+
+/* footer section starts  */
+
+footer {
+    background-color: #313131;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer h2 {color: #28b409;}
+footer h5 a {color: #fff;}
+footer h5:hover a { color: #28b409;}
+footer .last{background-color: #28b409;}
+footer .last span {font-size: 25px;}
+
+footer .middel {
+    position: relative;
+    width: 100%;
+}
+
+footer .middel::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent,#fff, transparent);
+    }
+    
+footer .middel::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent,#fff, transparent);
+}
+
+/* footer section ends  */
+
+/* media query section starts  */
+
+@media (max-width: 992px) {
+    nav ul li{width: 20%;}
+    nav .btn {margin-left: 30%;}
+}
+
+/* media query section ends  */
